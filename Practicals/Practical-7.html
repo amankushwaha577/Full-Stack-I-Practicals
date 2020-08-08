@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage Layout</title>
+    <style type="text/css">
+        body {
+            color: white;
+            font-family: Calibri;
+            font-size: 200%;
+        }
+        
+        #page {
+            border: 10px solid #f1f1f1;
+            display: block;
+            width: fit-content;
+            padding: 7px;
+            margin: auto;
+        }
+
+        #header {
+            border: solid;
+            text-align: center;
+            background-color: #808080;
+            display: block;
+            width: 1000px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #banner {
+            border: solid;
+            text-align: center;
+            background-color: #add9e6;
+            height: 400px;
+            display: block;
+            width: 1000px;
+            line-height: 400px;
+        }
+
+        h3 {
+            margin: 10px;
+            text-align: center;
+            color: black;
+        }
+
+        #circle {
+            height: 200px;
+            width: 200px;
+            background-color: #daa520;
+            border-radius: 50%;
+            margin: 25px;
+            float: left;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .section2 {
+            height: 520px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        #maincontent {
+            height: 500px;
+            width: 50%;
+            background-color: #808080;
+            line-height: 500px;
+            text-align: center;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .article {
+            height: 160px;
+            background-color: #d3691f;
+            width: 48%;
+            display: flex;
+            margin-bottom: 10px;
+            flex-direction: column;
+            float: right;
+            line-height: 160px;
+            text-align: center;
+        }
+
+        #boxes {
+            height: 280px;
+            display: flex;
+            width: 20%;
+            float: left;
+            flex-direction: column;
+            background-color: #ff4500;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 280px;
+        }
+
+        .section3 {
+            width: 100%;
+        }
+
+        #footer {
+            text-align: center;
+            background-color: #dda0dc;
+            display: block;
+            width: 1000px;
+            height: 80px;
+            line-height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="header">
+            Header
+        </div>
+        <div id="banner">
+            Banner
+        </div>
+        <h3>Section-1</h3>
+        <div id="circle">Circle 1</div>
+        <div id="circle">Circle 2</div>
+        <div id="circle">Circle 3</div>
+        <div id="circle">Circle 4</div>
+        <h3>Section-2</h3>
+        <div class="section2">
+            <div id="maincontent">
+                Main Content
+            </div>
+            <div class="article">Article 1</div>
+            <div class="article">Article 2</div>
+            <div class="article">Article 3</div>
+        </div>
+        <h3>Section-3</h3>
+        <div class="section3">
+            <div id="boxes">Box 1</div>
+            <div id="boxes">Box 2</div>
+            <div id="boxes">Box 3</div>
+            <div id="boxes">Box 4</div>
+        </div>
+        <h3>Section-4</h3>
+        <div id="footer">
+            Footer
+        </div>
+    </div>
+</body>
+
+</html>
