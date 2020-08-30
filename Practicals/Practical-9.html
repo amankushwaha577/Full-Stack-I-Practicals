@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Practical-9</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        body {
+            background-color: darkkhaki;
+        }
+        
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            position: fixed;
+            float: left;
+            max-width: 1200px;
+            width: 100%;
+            height: 70px;
+            background-color: grey;
+            top: 0;
+            margin: auto;
+            z-index: 1;
+        }
+        
+        .menu {
+            float: right;
+            list-style: none;
+        }
+        
+        .menu li {
+            display: inline-block;
+            padding: 5px 0px;
+        }
+        
+        .menu li a {
+            transition: .4s;
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-family: Calibri;
+            font-size: 30px;
+            padding: 0px 20px;
+        }
+        
+        .menu li a:hover {
+            color: black;
+            background-color: white;
+            padding: 14px 5px;
+        }
+        
+        .show-btn,
+        .hide-btn,
+        #chk {
+            font-size: 30px;
+            line-height: 70px;
+            color: white;
+            display: none;
+            float: right;
+            padding-right: 20px;
+        }
+        
+        .banner img {
+            margin-top: 90px;
+            height: 680px;
+            margin-bottom: 15px;
+            width: 100%;
+            display: flex;
+            font-size: 40px;
+            color: white;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h3 {
+            font-size: 22px;
+            font-weight: 560;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 72px;
+            font-family: sans-serif;
+            color: white;
+            position: absolute;
+            top: 120px;
+            margin-left: 150px;
+        }
+        
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 48px;
+            font-family: Cambria;
+            padding-top: 1%;
+        }
+        
+        p {
+            font-size: 20px;
+            font-family: Arial;
+            padding: 5%;
+            padding-bottom: 2%;
+        }
+        
+        .circle img {
+            border-radius: 50%;
+            padding: 2% 2.8%;
+        }
+        
+        .main {
+            height: 960px;
+            width: 100%;
+            display: flex;
+        }
+        
+        .main .left {
+            height: 100%;
+            width: 100%;
+            background-color: grey;
+            overflow: hidden;
+        }
+        
+        .left h3 {
+            float: left;
+            margin: 10px 0px 0px 10px;
+            font-size: xx-large;
+        }
+        
+        .left p {
+            display: inline-flex;
+            position: relative;
+            padding: 5px;
+            font-family: sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .main .right {
+            position: relative;
+            float: left;
+        }
+        
+        .right .rectangle img {
+            display: flex;
+            width: 100%;
+            height: 320px;
+        }
+        
+        .right .rectangle h1 {
+            position: absolute;
+            margin: 10px 0px 0px 25%;
+            font-family: sans-serif;
+        }
+        
+        .techno {
+            display: flex;
+            float: left;
+        }
+        
+        .html img {
+            width: 100%;
+            margin: 15px;
+            margin-left: 0px;
+            border-radius: 10px;
+            height: 200px;
+        }
+        
+        .html {
+            display: inline-block;
+            margin: 1.5% .2% 0% .2%;
+            width: 288px;
+            background: rgb(218, 208, 208);
+            border-radius: 10px;
+            font-family: sans-serif;
+            transition: all 0.4s;
+        }
+        
+        .html:hover {
+            background: goldenrod;
+        }
+        
+        .html a {
+            margin: auto;
+            justify-content: center;
+            width: 55%;
+            text-decoration: none;
+            display: flex;
+            background: rgb(214, 61, 61);
+            font-family: Calibri;
+            font-size: 25px;
+            color: whitesmoke;
+            border-radius: 50%;
+            transition: all 0.8s;
+            padding: 2% 0%;
+        }
+        
+        .html a:hover {
+            background: rgb(81, 83, 218);
+        }
+        
+        .footer-content {
+            width: 100%;
+            background-color: rgb(233, 165, 218);
+        }
+        
+        .footer-content p {
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-family: Arial;
+            padding: 1%;
+            transition: all 0.8s;
+        }
+        
+        .footer-content p a:hover {
+            background: rgb(221, 80, 80);
+        }
+        
+        @media (min-width: 801px) and (max-width: 1200px) {
+            .circle img {
+                border-radius: 50%;
+                padding: 2% 10%;
+            }
+            .html {
+                display: inline-block;
+                margin: 1.5% 7% 0% 6.5%;
+                /* margin: auto; */
+                width: 288px;
+                background: rgb(218, 208, 208);
+                border-radius: 10px;
+                font-family: sans-serif;
+                transition: all 0.4s;
+            }
+        }
+        
+        @media (min-width: 601px) and (max-width:800px) {
+            .header {
+                width: 100%;
+                background-color: grey;
+                position: fixed;
+                height: 70px;
+            }
+            .show-btn {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: rgb(102, 85, 85);
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+            .menu li {
+                display: block;
+            }
+            .manu li a {
+                display: block;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+            .circle img {
+                border-radius: 50%;
+                padding: 2% 5.6%;
+            }
+            .html {
+                display: inline-block;
+                margin: 1.5% 0px 0% 10px;
+                width: 288px;
+                background: rgb(218, 208, 208);
+                border-radius: 10px;
+                font-family: sans-serif;
+                transition: all 0.4s;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .show-btn {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+            .menu li {
+                display: block;
+            }
+            .manu li a {
+                display: block;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+            .circle img {
+                border-radius: 50%;
+                padding: 2% 32%;
+            }
+            .html {
+                display: inline-block;
+                margin: 1.5% 25% 0% 25%;
+                width: 300px;
+                background: rgb(218, 208, 208);
+                border-radius: 10px;
+                font-family: sans-serif;
+                transition: all 0.4s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a name="top"></a>
+    <div class="container">
+        <a name="home"></a>
+        <div class="header">
+            <input type="checkbox" id="chk" />
+            <label for="chk" class="show-btn">
+              <i class="fa fa-bars"></i>
+            </label>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#teams">Team</a></li>
+                    <li><a href="#techno">Technologies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <label for="chk" class="hide-btn">
+                  <i class="fa fa-times"></i>
+                </label>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="../Images/Practical-8/image.jpg" alt="Banner Image">
+            <h2>Practical - 9</h2>
+        </div>
+        <div class="team">
+            <a name="teams">
+                <h1>Team</h1>
+            </a>
+            <div class="circle">
+                <img src="../Images/Practical-8/1.png">;
+                <img src="../Images/Practical-8/2.png">;
+                <img src="../Images/Practical-8/3.png">;
+                <img src="../Images/Practical-8/4.png">;
+            </div>
+        </div>
+        <a name="about">
+            <h1>About Us</h1>
+        </a>
+        <div class="main">
+            <div class="left">
+                <h3>About Project</h3>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero iste dolor voluptatem nihil maiores rerum veritatis labore non perferendis, nisi est nemo fuga aliquid, esse sunt. Eaque, tempore. Velit sit neque perferendis consectetur numquam placeat
+                    architecto assumenda ipsam corporis error pariatur fugiat excepturi ipsa eos inventore, ad dolorum recusandae! Doloremque at beatae, ratione rem id quas adipisci libero quis! Ea, dicta eius dolorem optio impedit sequi. Distinctio eveniet
+                    nobis a odio numquam eligendi minima, quo modi architecto repellendus neque nulla itaque quaerat cumque. Cupiditate, nostrum. Mollitia odit quas quaerat qui inventore in adipisci quod, accusantium officia aliquid similique officiis.
+                    Incidunt esse fugit repudiandae. Perferendis vel optio libero at repellat error deserunt tempora perspiciatis consequatur necessitatibus possimus fugit velit sint magnam blanditiis, dolore voluptatem quae, assumenda illo nihil eaque
+                    totam? Ut hic tempore unde, sed minus accusamus illo quod exercitationem fugit veniam provident quisquam doloribus eaque fugiat illum est consequatur ullam voluptates nihil nobis reprehenderit sequi odio. Maiores in totam repudiandae
+                    iusto doloribus blanditiis dolore, et eum alias fugiat, dicta sunt accusantium id sit dolores eaque! Cupiditate consequuntur hic nobis magnam a, voluptates, natus obcaecati aut sunt, incidunt officiis nihil inventore vitae animi unde.
+                    Maxime deleniti est et? Consequatur harum, sint assumenda magnam vitae dolorum ipsum expedita, nesciunt adipisci ratione incidunt laboriosam earum explicabo ducimus, architecto nulla provident accusantium amet illo natus. Odit consectetur
+                    cum molestiae totam iste sunt laboriosam ipsum excepturi ab sequi eaque voluptates, nesciunt impedit itaque nemo mollitia rerum est tempora exercitationem repudiandae corporis aliquid, nihil architecto id! Incidunt tempore, eius natus
+                    odit veritatis nisi aliquam fugit alias laudantium sit distinctio rerum reprehenderit fugiat, repellendus nobis quia asperiores totam saepe voluptate. Voluptate itaque pariatur deleniti, quas perspiciatis placeat soluta quos quae reprehenderit
+                    tenetur ut expedita consequatur. Doloremque, esse. Unde odit, repudiandae minima ea ex assumenda aperiam, laboriosam optio nam vero perferendis harum, nihil corrupti id nulla delectus doloremque? Obcaecati, accusamus sapiente quae
+                    qui tempore voluptates provident beatae ab culpa neque dolorem. Dolorem in hic enim, quibusdam consequuntur molestiae similique voluptatibus numquam rerum, nisi saepe ducimus quae harum sunt distinctio nostrum error, illo unde quia
+                    assumenda ratione possimus dicta repudiandae officiis. Voluptatum incidunt quisquam suscipit minima impedit in laudantium quia omnis reiciendis repudiandae distinctio perferendis accusamus, placeat, sed nulla iure quibusdam explicabo
+                    officia et est. Alias velit corporis iste aliquam aperiam dolores! Optio corporis autem totam minima, velit nemo, nisi cumque commodi repellat quia hic. Quisquam natus rerum error!
+                </p>
+            </div>
+            <div class="right">
+                <div class="rectangle">
+                    <h1 class="project">Project-1</h1>
+                    <img src="../Images/Practical-8/p1.jpg">
+                </div>
+                <div class="rectangle">
+                    <h1 class="project">Project-2</h1>
+                    <img src="../Images/Practical-8/p2.jpeg">
+                </div>
+                <div class="rectangle">
+                    <h1 class="project">Project-3</h1>
+                    <img src="../Images/Practical-8/p3.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="tech">
+            <a name="techno">
+                <h1>Technologies Used</h1>
+            </a>
+            <div class="box">
+                <div class="html">
+                    <img src="../Images/html img.png" alt="HTML Image">
+                    <h3>Introduction to HTML</h3>
+                    <p>HTML stands for <i>Hypertext Markup Language</i>, and it is the most widely used language to write Web Pages. Hypertext refers to the way in which Web pages (HTML documents) are linked together.</p>
+                    <a href="../Practical 5/Intro to HTML.html">Read
+                    more</a>
+                </div>
+                
+
+                <div class="html">
+                    <img src="../Images/css img.png" alt="CSS Image">
+                    <h3>Introduction to CSS</h3>
+                    <p>CSS is short for <i>Cascading Style Sheets</i>, and is the preferred way for setting the look and feel of a website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will
+                    </p>
+                    <a href="../Practical 5/Intro to CSS.html">Read
+                    more</a>
+                </div>
+                
+                <div class="html">
+                    <img src="../Images/JavaScript img.jpg" alt="Javascript Image ">
+                    <h3>Introduction to JavaScript</h3>
+                    <p>JavaScript often abbreviated as JS, is a high-level programming language, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object orientation,</p>
+                    <a href="../Practical 5/Intro to Javascript.html">Read
+                    more</a>
+                </div>
+
+                <div class="html">
+                    <img src="../Images/bootstrap img.png" alt="Bootstrap Image ">
+                    <h3>Introduction to Bootstrap</h3>
+                    <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive
+                    </p>
+                    <a href="../Practical 5/Intro to Bootstrap.html">Read
+                    more</a>
+                </div>
+            </div>
+          
+        </div>
+        <div class="footer ">
+            <a name="contact ">
+                <h1>Contact</h1>
+            </a>
+            <div class="footer-content ">
+                <div>
+                    <p>Coypright &copy; Reserved by&ThinSpace;<a href="https://www.instagram.com/the_amankushwaha/" style="text-decoration: none; ">Aman Kushwaha</a>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <a href="#top " style="text-decoration: none; ">Back to Top</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
