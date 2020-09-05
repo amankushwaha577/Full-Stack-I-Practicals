@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Practical-12</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            background-color: lightgray;
+            padding: 10px;
+        }
+        
+        body {
+            opacity: .85;
+        }
+        
+        .container {
+            width: 800px;
+            background-color: khaki;
+            padding: 10px;
+            margin: 20px auto;
+        }
+        
+        .container h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background-color: khaki;
+        }
+        
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        .basic {
+            background-color: #9ec491;
+        }
+        
+        .plus {
+            background-color: #86b9a1;
+        }
+        
+        .deluxe {
+            background-color: #7fa5b3;
+        }
+        
+        .pro {
+            background-color: #a1b386;
+        }
+        
+        td {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        td,
+        th {
+            width: 200px;
+            padding: 10px 5px;
+            text-align: center;
+            border-left: 2px solid khaki;
+            border-right: 2px solid khaki;
+        }
+        
+        tr:nth-child(2) {
+            color: darkgreen;
+            font-weight: 600;
+        }
+        
+        th {
+            height: 80px;
+            color: blueviolet;
+            font-size: 36px;
+        }
+        
+        i {
+            margin-right: 5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #ebf0e5;
+        }
+        
+        tr:last-child {
+            line-height: 70px;
+        }
+        
+        a {
+            text-decoration: none;
+            background-color: rgb(63, 63, 189);
+            padding: 16px 32px;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+        
+        a:hover {
+            background-color: rgb(202, 39, 39);
+        }
+        
+        .fa-check {
+            color: darkgreen;
+        }
+        
+        .fa-times {
+            color: red;
+        }
+        
+        @media (max-width:800px) {
+            h1 {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+
+<body background="../Images/fs.jpeg">
+    <h1>Full Stack</h1>
+    <h1>Practical-12 : Create a Custom Price Table Template.</h1>
+    <div class="container">
+        <h1>Select Your Plan</h1>
+        <table>
+            <colgroup class="basic"></colgroup>
+            <colgroup class="plus"></colgroup>
+            <colgroup class="deluxe"></colgroup>
+            <colgroup class="pro"></colgroup>
+            <tr>
+                <th><i class="fa fa-building"></i>Basic</th>
+                <th><i class="fa fa-superpowers"></i>Plus</th>
+                <th><i class="fa fa-telegram"></i>Deluxe</th>
+                <th><i class="fa fa-tachometer"></i>Pro</th>
+            </tr>
+            <tr>
+                <td>Rs. 500/-</td>
+                <td>Rs. 1500/-</td>
+                <td>Rs. 2500/-</td>
+                <td>Rs. 3500/-</td>
+            </tr>
+            <tr>
+                <td>50 pages</td>
+                <td>75 pages</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>3 users</td>
+                <td>5 users</td>
+                <td>10 users</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>10 sites</td>
+                <td>25 Sites</td>
+                <td>100 Sites</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>50 MB</td>
+                <td>250 MB</td>
+                <td>1 GB</td>
+                <td>5 GB</td>
+            </tr>
+            <tr>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><a href="">Sign Up</a></td>
+                <td><a href="">Sign Up</a></td>
+                <td><a href="">Sign Up</a></td>
+                <td><a href="">Sign Up</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Practical-10</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: khaki;
+        }
+        
+        .header {
+            width: 100%;
+            height: 70px;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+        }
+        
+        .header img {
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+        }
+        
+        .header h1 {
+            line-height: 70px;
+            color: white;
+        }
+        
+        .content {
+            width: 100%;
+            padding: 20px;
+            float: right;
+            transition: .7s;
+        }
+        
+        .content img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: auto;
+        }
+        
+        .content p {
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: lightgrey;
+            padding-top: 10px;
+            text-align: justify;
+        }
+        
+        .sidebar {
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            top: 70px;
+            background-color: #333;
+            left: -100%;
+            transition: .7s;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.671);
+        }
+        
+        .sidebar ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 15px 25px;
+            transition: .5s;
+        }
+        
+        span {
+            margin-left: 15px;
+        }
+        
+        .sidebar ul li a:hover {
+            border-left: 10px solid white;
+        }
+        
+        .social {
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 30px;
+            border-top: 2px solid rgba(255, 255, 255, .671);
+            border-bottom: 2px solid rgba(255, 255, 255, .671);
+        }
+        
+        i {
+            color: white;
+            font-size: 30px;
+        }
+        
+        .show-btn,
+        .hide-btn {
+            font-size: 36px;
+            color: white;
+            position: fixed;
+            top: 17px;
+            left: 50px;
+        }
+        
+        .hide-btn {
+            opacity: 0;
+        }
+        
+        #chk:checked~.sidebar {
+            left: 0;
+        }
+        
+        #chk:checked~.show-btn {
+            opacity: 0;
+        }
+        
+        #chk:checked~.hide-btn {
+            opacity: 1;
+        }
+        
+        #chk:checked~.content {
+            width: 80%;
+        }
+        
+        @media (max-width: 1010px) {
+            .header h1 {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 720px) {
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .header h1 {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .header h1 {
+                display: none;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .show-btn,
+            .hide-btn {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../Images/fs logo.png" alt=""/>
+        <h1>FullStack Responsive Vertical Navigation Bar</h1>
+    </div>
+    <input type="checkbox" name="" id="chk" />
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.github.com/aps045" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+    <div class="content">
+        <img src="../Images/Practical-8/image.jpg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel harum expedita quos earum eius veniam, ipsa tempora corporis qui impedit quidem est quasi fugit accusantium blanditiis hic non? Dolor, autem necessitatibus dignissimos minus consequatur
+            atque reiciendis odit sequi ipsam incidunt! Ut expedita numquam aut assumenda totam quis corporis commodi temporibus. Corporis porro quisquam excepturi dolor enim, similique voluptates dolorem! Iste asperiores non fugit perspiciatis exercitationem
+            consectetur voluptatem at voluptates vitae unde! Tenetur in porro ipsam facere earum hic odio, nulla dolorem velit officia non deleniti dolorum ad pariatur ut laboriosam aliquam harum quidem eaque id unde? Eaque, nesciunt quas! Explicabo dolores,
+            inventore exercitationem delectus sequi ad eveniet, necessitatibus nesciunt dolorem, quos aliquid. Molestias, impedit natus sapiente reiciendis aperiam magnam, minus corporis harum adipisci tenetur laborum accusantium velit. Ducimus in dicta
+            sunt architecto libero beatae commodi, neque ipsam, eum natus consequuntur. Incidunt nostrum ipsum laboriosam molestiae rerum consectetur adipisci cum praesentium est ut tempore repellat, autem inventore voluptate placeat non, harum quae repudiandae
+            nesciunt perspiciatis facere et voluptatem. Ad iste obcaecati amet, eum enim voluptates itaque, rerum commodi minus deleniti voluptate dolorum explicabo molestiae, adipisci repellendus quod ex tempora veritatis animi maiores! Odit voluptatem
+            culpa ipsam impedit illo id porro officia assumenda, totam provident officiis rem consequuntur doloremque tenetur unde optio, quia beatae facilis, eaque fugiat consequatur non suscipit magnam dignissimos! Asperiores debitis eaque quis corrupti
+            nesciunt nihil temporibus voluptatibus minus veniam, odit dolorum doloribus veritatis. At aspernatur, suscipit vitae magni omnis ducimus dolorem a id. Minima necessitatibus, mollitia ullam doloribus officia quo. Aperiam rem odit deserunt?
+            Commodi atque minus quisquam ea soluta asperiores vero laudantium ut veritatis autem excepturi quis molestiae corporis illum voluptatem, nobis rem repudiandae perspiciatis maiores architecto quod doloremque rerum sint nemo? Ullam nemo repellendus
+            laudantium unde dignissimos voluptatum facilis quae! In vero omnis facilis cum obcaecati explicabo molestiae, veritatis sint autem quisquam consequatur, repudiandae dolores tenetur quod excepturi qui eaque amet sequi molestias, velit officiis
+            id fugit! Hic inventore praesentium ipsum obcaecati, recusandae quos, esse provident maxime qui vero voluptates expedita. Eligendi delectus neque non nesciunt nam provident tempora natus inventore esse voluptatibus ducimus sunt alias porro
+            est ut, dicta iusto, nisi deserunt a quisquam adipisci dolorum beatae! Ipsa ad nesciunt tenetur quis optio, iste nisi harum rem facere! In dignissimos repellat aperiam nulla aut, modi sequi nam magnam dolorum molestiae doloribus maiores quos,
+            voluptatem doloremque ea velit? Asperiores ut minima aut, numquam illo voluptates eos reprehenderit, totam suscipit laudantium molestiae repellat officiis qui perspiciatis veniam enim alias tempore sed repudiandae illum doloremque nihil corporis
+            nulla perferendis. Inventore aspernatur quo deleniti error, facilis pariatur ipsa atque officia laborum, quia repellat repudiandae. Doloremque dolores impedit harum eligendi ut tenetur? Quod dolores repudiandae facilis pariatur sint temporibus
+            eligendi a maiores optio velit quo omnis, necessitatibus amet! Qui, voluptate repellendus architecto quis excepturi impedit, harum laudantium porro praesentium facilis pariatur nihil natus placeat atque sunt sit, voluptas at assumenda doloremque
+            nulla deleniti vitae. Harum ratione officia nostrum ipsa dolores et explicabo commodi atque blanditiis dicta in aut, cum tempora!</p>
+    </div>
+</body>
+
+</html>
