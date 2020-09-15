@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-13</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+ 
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: gray;
+}
+
+footer {
+    width: 100%;
+    background-color: #26272b;
+}
+
+.sec-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 15px;
+}
+
+.about {
+    width: 40%;
+}
+
+.sec-1 h2 {
+    font-size: 18px;
+    color: lightgray;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about p {
+    text-align: justify;
+    color: lightgray;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.sec-1 ul {
+    list-style-type: none;
+    line-height: 24px;
+}
+
+.sec-1 ul li {
+    list-style-type: none;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    color: orange;
+}
+
+span {
+    color: gray;
+}
+
+i {
+    color: gray;
+    font-size: 20px;
+}
+
+.sec-2 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.sec-2 h2 {
+    color: lightgray;
+    font-size: 24px;
+    padding: 0;
+}
+
+.sec-2 a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    font-size: 18px;
+    background-color: red;
+    margin-left: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.sec-2 a:hover {
+    background-color: orange;
+}
+
+.sec-3 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sec-3 ul {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.sec-3 ul li {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    background-color: #424242;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 20px;
+}
+
+.sec-3 ul li i {
+    color: white;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.sec-3 ul li:hover:nth-child(1) {
+    background-color: #3b5999;
+}
+
+.sec-3 ul li:hover:nth-child(2) {
+    background-color: #55acee;
+}
+
+.sec-3 ul li:hover:nth-child(3) {
+    background-color: #dd4b39;
+}
+
+.sec-3 ul li:hover:nth-child(4) {
+    background-color: #0077B5;
+}
+
+.sec-3 ul li:hover:nth-child(5) {
+    background-color: #e4405f;
+}
+
+.sec-4 {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 30px;
+    color: gray;
+}
+
+.sec-4 p {
+    position: relative;
+}
+
+.sec-4 p::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    background-color: yellow;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+}
+
+.sec-4 p:hover::after {
+    width: 100%;
+}
+
+hr {
+    opacity: 0.2;
+}
+
+@media(max-width:840px) {
+    .main-content {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: gray;
+    }
+    footer {
+        width: 100%;
+        background-color: #26272b;
+    }
+    .sec-1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 15px;
+    }
+    .about {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .sec-1 h2 {
+        font-size: 18px;
+        color: lightgray;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .about p {
+        text-align: justify;
+        color: lightgray;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    .sec-1 ul {
+        list-style-type: none;
+        line-height: 24px;
+    }
+    .sec-1 ul li {
+        list-style-type: none;
+        line-height: 24px;
+    }
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+    a:hover {
+        color: orange;
+    }
+    span {
+        color: gray;
+    }
+    i {
+        color: gray;
+        font-size: 20px;
+    }
+    .sec-2 {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+    .sec-2 h2 {
+        color: lightgray;
+        font-size: 24px;
+        padding: 0;
+    }
+    .sec-2 a {
+        display: inline-block;
+        padding: 10px 15px;
+        color: white;
+        font-size: 18px;
+        background-color: red;
+        margin-left: 10px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+    .sec-2 a:hover {
+        background-color: orange;
+    }
+    .sec-3 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .sec-3 ul {
+        list-style-type: none;
+        margin: 20px;
+    }
+    .sec-3 ul li {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background-color: #424242;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: 20px;
+    }
+    .sec-3 ul li i {
+        color: white;
+        font-size: 24px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .sec-3 ul li:hover:nth-child(1) {
+        background-color: #3b5999;
+    }
+    .sec-3 ul li:hover:nth-child(2) {
+        background-color: #55acee;
+    }
+    .sec-3 ul li:hover:nth-child(3) {
+        background-color: #dd4b39;
+    }
+    .sec-3 ul li:hover:nth-child(4) {
+        background-color: #0077B5;
+    }
+    .sec-3 ul li:hover:nth-child(5) {
+        background-color: #e4405f;
+    }
+    .sec-4 {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        padding: 30px;
+        color: gray;
+    }
+    .sec-4 p {
+        position: relative;
+    }
+    .sec-4 p::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        background-color: yellow;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+    }
+    .sec-4 p:hover::after {
+        width: 100%;
+    }
+    hr {
+        opacity: 0.2;
+    }
+}
+
+@media(max-width:509px) {
+    .main-content {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: gray;
+    }
+    footer {
+        width: 100%;
+        background-color: #26272b;
+    }
+    .sec-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 15px;
+    }
+    .about {
+        width: 100%;
+    }
+    .sec-1 h2 {
+        font-size: 18px;
+        color: lightgray;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+    .about p {
+        text-align: justify;
+        color: lightgray;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    .sec-1 ul {
+        list-style-type: none;
+        line-height: 24px;
+    }
+    .sec-1 ul li {
+        list-style-type: none;
+        line-height: 24px;
+    }
+    a {
+        text-decoration: none;
+        color: gray;
+    }
+    a:hover {
+        color: orange;
+    }
+    span {
+        color: gray;
+    }
+    i {
+        color: gray;
+        font-size: 20px;
+    }
+    .sec-2 {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+    .sec-2 h2 {
+        color: lightgray;
+        font-size: 24px;
+        padding: 0;
+    }
+    .sec-2 a {
+        display: inline-block;
+        padding: 10px 15px;
+        color: white;
+        font-size: 18px;
+        background-color: red;
+        margin-left: 10px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+    .sec-2 a:hover {
+        background-color: orange;
+    }
+    .sec-3 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .sec-3 ul {
+        list-style-type: none;
+        margin: 20px;
+    }
+    .sec-3 ul li {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-color: #424242;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: 10px;
+    }
+    .sec-3 ul li i {
+        color: white;
+        font-size: 24px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .sec-3 ul li:hover:nth-child(1) {
+        background-color: #3b5999;
+    }
+    .sec-3 ul li:hover:nth-child(2) {
+        background-color: #55acee;
+    }
+    .sec-3 ul li:hover:nth-child(3) {
+        background-color: #dd4b39;
+    }
+    .sec-3 ul li:hover:nth-child(4) {
+        background-color: #0077B5;
+    }
+    .sec-3 ul li:hover:nth-child(5) {
+        background-color: #e4405f;
+    }
+    .sec-4 {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        padding: 30px;
+        color: gray;
+    }
+    .sec-4 p {
+        position: relative;
+    }
+    .sec-4 p::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        background-color: yellow;
+        transition: all .4s;
+        -webkit-transition: all .4s;
+        -moz-transition: all .4s;
+        -ms-transition: all .4s;
+        -o-transition: all .4s;
+    }
+    .sec-4 p:hover::after {
+        width: 100%;
+    }
+    hr {
+        opacity: 0.2;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <section class="main-content">
+        <span style="color: blue;font-weight: bolder;">Responsive</span> <span style="color: red;font-weight: bolder">&nbsp;Footer</span></section>
+    <footer>
+        <section class=" sec-1 ">
+            <section class="about ">
+                <h2>about</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore atque optio fuga at dicta dolores delectus odit obcaecati pariatur aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, repellendus ipsam! Autem in,
+                    quaerat amet distinctio illo, iure facilis placeat eum nulla maxime adipisci ipsum consectetur delectus et repudiandae sed?</p>
+            </section>
+            <section class="link1 ">
+                <h2>categoroes</h2>
+                <ul>
+                    <li>
+                        <a href="# ">C</a>
+                    </li>
+                    <li>
+                        <a href="# ">UI Design</a>
+                    </li>
+                    <li>
+                        <a href="# ">PHP</a>
+                    </li>
+                    <li>
+                        <a href="# ">Java</a>
+                    </li>
+                    <li>
+                        <a href="# ">Android</a>
+                    </li>
+                    <li>
+                        <a href="# ">Hybrid Apps</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="link2 ">
+                <h2>QUICK Links</h2>
+                <ul>
+                    <li>
+                        <a href="# ">About US</a>
+                    </li>
+                    <li>
+                        <a name="#c ">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="# ">Contribute</a>
+                    </li>
+                    <li>
+                        <a href="# ">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="# ">Sitemap</a>
+                    </li>
+                    <li>
+                        <a href="# ">Disclaimer</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="link3 " id="c ">
+                <h2>Contact us</h2>
+                <ul>
+                    <li><i class="fa fa-home "></i><span>&nbsp;Kanpur</span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-envelope "></i><span>&nbsp; satyam.jha_cs18@gla.ac.in</span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-phone-square "></i><span>&nbsp; Mobile: 1234567895</span></li>
+                </ul>
+
+                <ul>
+                    <li><i class="fa fa-facebook-square "></i><span>&nbsp; Satyam Jha</span></li>
+                </ul>
+            </section>
+        </section>
+        <hr width="100% ">
+        <section class="sec-2 ">
+            <h2>Register with us</h2>
+            <a href="signup.html ">Sign up!</a>
+        </section>
+        <hr width="100% ">
+        <section class="sec-3 ">
+            <ul>
+                <li><a href="# "><i class="fa fa-facebook-square "></i></a></li>
+                <li><a href="# "><i class="fa fa-twitter "></i></a></li>
+                <li><a href="# "><i class="fa fa-google "></i></a></li>
+                <li><a href="# "><i class="fa fa-linkedin "></i></a></li>
+                <li><a href="# "><i class="fa fa-instagram "></i></a></li>
+            </ul>
+        </section>
+        <section class="sec-4 ">
+            <p>Copyright &copy; 2020 | All Rights Reserved by | <a href="aman.kushwaha_cs18@gla.ac.in ">Aman Kushwaha
+                </a>
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>
