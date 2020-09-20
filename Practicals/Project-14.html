@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Project-14</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: silver;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            padding: 10px;
+            font-size: 80px;
+            color: red;
+            padding-bottom: 60px;
+        }
+        #box{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+        #form1,#form2,#form3{
+            width:350px;
+            height: 400px;
+            background-color: white;
+            box-shadow: 5px 5px 5px darkslategray;
+        }
+        #section1{
+            color: white;
+            text-align: center;
+            width: 100%;
+            height:auto;
+            background: linear-gradient(to bottom left,red,yellow);
+        }
+        #section1 h2{
+            padding: 20px;
+        }
+        #section1icon{
+            font-size: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+            padding: 10px;
+            padding-bottom: 20px;
+        }
+        #section1icon a{
+            color: white;
+        }
+        #section2{
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            color: silver;
+        }
+        #section2 form input{
+            border: 0;
+            width: 100%;
+            font-size: 20px;
+            border-bottom: 2px solid silver;
+        }
+        #section2 form h5{
+            float: right;
+            padding-top: 10px;
+        }
+        #section3{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            color: silver;
+            box-sizing: border-box;
+            padding-bottom: 30px;
+        }
+        #login{
+            border: 5px solid darkslategray;
+            background-color:darkslategray;
+            text-align: center;
+            border-radius: 30px;
+            color: white;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        #login a{
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+        #section3 h5 a{
+            text-decoration: none;
+        }
+        #section4{
+            text-align: center;
+            color:#ff4b5c;
+            padding: 15px;
+        }
+        #section5{
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            margin-top: 10px;
+            padding: 20px;
+            color: silver;
+        }
+        #section5 form input{
+            border: 0;
+            width: 100%;
+            font-size: 20px;
+            border-bottom: 2px solid silver;
+        }
+        #section6{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            color: silver;
+            box-sizing: border-box;
+            padding-bottom: 30px;
+        }
+        #SIGN{
+            border: 5px solid #ff4b5c;
+            background-color:#ff4b5c;
+            text-align: center;
+            border-radius: 30px;
+            color: white;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        #SIGN a{
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+        #section6 h5 a{
+            text-decoration: none;
+        }
+        #section7{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 20px;
+            height: 62px;
+            background-color:#838383;
+        }
+        #section7 a{
+            color: white;
+        }
+        #check{
+            padding-top: 15px;
+            padding-bottom: 4px;
+        }
+        #terms{
+            margin-right: 10px;
+        }
+        #section8{
+            text-align: center;
+            padding: 15px;
+        }
+        #section9{
+            width: 100%;
+            box-sizing: border-box;
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 20px;
+            color: silver;
+        }
+        #section9 form input{
+            border: 0;
+            width: 100%;
+            font-size: 20px;
+            border-bottom: 2px solid silver;
+        }
+        #section9 form h5{
+            float: right;
+            padding-top: 10px;
+        }
+        #signin{
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #SIGNIN{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 15px;
+            border-radius: 30px;
+            background:linear-gradient(to bottom left,blue,skyblue);
+        }
+        #SIGNIN a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        #form3 h5{
+            text-align: center;
+        }
+        #form3icon,#ic1,#ic2,#ic3{
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+        }
+        #ic1,#ic2,#ic3{
+            width: 25%;
+            box-shadow: 3px 3px 3px blue;
+            box-sizing: border-box;
+            border-radius:30px ;
+        }
+        #form3icon a{
+            color: blue;
+            text-decoration: none;
+        }
+        @media(max-width: 1150px){
+            #form1,#form2,#form3{
+                width: 300px;
+            }
+            #login{
+            padding-left:5px;
+            padding-right:5px;
+        }
+        }
+        @media(max-width: 950px){
+            #box{
+            display: block;
+            }
+            h1{
+                font-size: 40px;
+            }
+            #form1,#form2,#form3{
+                width: 350px;
+                margin-bottom: 20px;
+            }
+            #login{
+            padding-left:20px;
+            padding-right:20px;
+        }
+        #ddd{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+        @media(max-width: 374px){
+            #form1,#form2,#form3{
+                width: 300px;
+            }
+            #login{
+            padding-left:5px;
+            padding-right:5px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1>FORM TEMPLATES</h1>
+    <div id="box">
+        <div id="ddd">
+        <div id="form1">
+            <div id="section1">
+                <h2>Log in</h2>
+                <div id="section1icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+            </div>
+            <div id="section2">
+                <form action="">
+                    <label for="">Your email</label><br>
+                    <input type="email" name="useremail" id=""><br><br>
+                    <label for="">Password</label><br>
+                    <input type="password" name="passworduser" id=""><br>
+                    <h5>Forgot <span style="color: black;font-weight: bold;">Password?</span></h5>
+                </form>
+            </div>
+            <div id="section3">
+                <div id="login">
+                <a href="#">LOG IN</a>
+                </div>
+                <div>
+                    <h5>Don't have an account? <a href="#"><span style="color: black;font-weight: bold;">Sign up</span></a></h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="ddd">
+        <div id="form2">
+            <div id="section4">
+                <h2>Sign up</h2>
+            </div>
+            <div id="section5">
+                <form action="">
+                    <label for="">Your email</label><br>
+                    <input type="email" name="useremail" id=""><br><br>
+                    <label for="">Password</label><br>
+                    <input type="password" name="passworduser" id=""><br>
+                </form>
+                <div id="check">
+                <input type="checkbox" name="terms" id="terms">
+                <label for="terms">Accept the <span style="color: blue;">Terms and Contitions</span></label>
+                </div>
+            </div>
+            <div id="section6">
+                <div id="SIGN">
+                <a href="#">SIGN UP</a>
+                </div>
+                <div>
+                    <h5>Have an account? <a href="#"><span style="color:blue;font-weight: bold;">Log in</span></a></h5>
+                </div>
+            </div>
+            <div id="section7">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+        </div>
+        </div>
+        <div id="ddd">
+        <div id="form3">
+            <div id="section8">
+                <h2>Sign in</h2>
+            </div>
+            <div id="section9">
+                <form action="">
+                    <label for="">Your email</label><br>
+                    <input type="email" name="useremail" id=""><br><br>
+                    <label for="">Password</label><br>
+                    <input type="password" name="passworduser" id=""><br>
+                    <h5><span style="color: blue;">Forgot Password?</span></label></h5>
+                </form>
+            </div>
+            <div id="section10">
+                <div id="signin">
+                <div id="SIGNIN">
+                    <a href="#">SIGN IN</a>
+                </div>
+            </div>
+                <h5>or Sign in with:</h5>
+                <div id="form3icon">
+                    <div id="ic1">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div id="ic2">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div id="ic3">
+                        <a href=""><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
