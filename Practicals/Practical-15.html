@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 10px;
+            font-size: 80px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        input {
+            margin: 32px;
+            width: 250px;
+            font-size: 36px;
+            text-align: center;
+            background-color: white;
+            color: black;
+            border: 3px solid black;
+        }
+        
+        button {
+            font-size: 32px;
+            width: 50px;
+            text-align: center;
+            background-color: green;
+            color: black;
+            padding: 4px;
+            border: 3px solid black;
+        }
+        
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <div>
+        <button id="sub" onclick="sub()">-</button>
+        <input type="text" value="0" id="count" disabled>
+        <button id="add" onclick="add()">+</button>
+    </div>
+    <script>
+        let input = document.querySelector('input');
+        document.getElementById("sub").disabled = true;
+        document.getElementById("sub").style.backgroundColor = "red";
+
+        function add() {
+            document.getElementById("sub").disabled = false;
+            document.getElementById("sub").style.backgroundColor = "green";
+            input.value = parseInt(input.value) + 1;
+        }
+
+        function sub() {
+            if (input.value == 0) {
+                disabled = true;
+                style.backgroundColor = "red";
+            } else {
+                input.value = parseInt(input.value) - 1;
+            }
+            if (input.value == 0) {
+                document.getElementById("sub").disabled = true;
+                document.getElementById("sub").style.backgroundColor = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
