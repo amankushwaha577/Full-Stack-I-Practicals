@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 15 | Counter</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20pt;
+    font-weight: normal;
+    background: rgb(108, 87, 226);
+    background: -webkit-linear-gradient( 90deg, rgb(12, 75, 56), black);
+    background: -o-linear-gradient( 180deg, rgb(16, 87, 37), black);
+    background: -moz-linear-gradient( 90deg, rgb(17, 85, 17), black);
+    background: linear-gradient(180deg, rgb(25, 109, 77), black);
+    text-align: center;
+}
+
+.container {
+    margin: 100px auto;
+    text-align: center;
+    height: 60vh;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 26px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #1d571f;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+    margin: 30px;
+}
+
+.button:hover {
+    background-color: #113d13
+}
+
+.button:active {
+    background-color: #0a2b0c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#counter {
+    padding: 0px 30px;
+    font-size: 60px;
+    margin-top: 10px;
+    display: inline;
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px #4e3323;
+}
+
+h3 {
+    font-weight: bolder;
+    color: white;
+    font-size: 60px;
+    margin-bottom: 15vh;
+    font-family: 'Cinzel Decorative';
+    text-shadow: 2px 2px 8px #a3a53b;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Counter</h3>
+        <button id="decrement" class="button" onclick="decrement()"><i class="fa fa-minus" aria-hidden="true"></i>
+        </button>
+        <div id="counter"> 0 </div>
+        <button id="increment" class="button" onclick="increment()"><i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    </div>
+    <script src="../JS/practical15.js" type="text/javascript"></script>
+
+</body>
+
+</html>
