@@ -79,27 +79,27 @@ background-repeat: no-repeat;
         clock.innerHTML = `${addZero(hour_t)}<span>:</span>${addZero(min)}<span>:</span>${addZero(seconds)} ${amPm}`;
         todayDate.innerHTML = `${today}`;
         if (hours >=20){
-            document.body.style.backgroundImage = "url('../images/moon2.jpg')";
+            document.body.style.backgroundImage = "url('../Images/moon2.jpg')";
             clock.style.color = "white";
             greeting.style.color = "white";
             greeting.innerHTML = 'Good Night';
    
         }
         else if(hours>=16 && hours<20){
-            document.body.style.backgroundImage = "url('../images/scene1.jpg')";
+            document.body.style.backgroundImage = "url('../Images/scene1.jpg')";
             clock.style.color = "white";
             greeting.style.color = "white";
             greeting.innerHTML = 'Good Evening';
         }
         else if(hours>=12 && hours<16){
-            document.body.style.backgroundImage = "url('../images/moon1.jpg')";
+            document.body.style.backgroundImage = "url('../Images/moon1.jpg')";
             clock.style.color = "black";
             greeting.style.color = "white";
             greeting.innerHTML = 'Good Afternoon';
 
         }
         else{
-            document.body.style.backgroundImage = "url('../images/scene2.jpg')";
+            document.body.style.backgroundImage = "url('../Images/scene2.jpg')";
             clock.style.color = "Black";
             greeting.style.color = "Black";
             greeting.innerHTML = 'Good Morning';
