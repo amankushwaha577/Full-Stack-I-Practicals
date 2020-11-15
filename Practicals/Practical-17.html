@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-17</title>
+    <style>
+  
+  *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+background-size: cover;
+background-repeat: no-repeat;
+}
+.time-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock{
+    font-size: 8rem;
+    margin: 10px;
+}
+
+.greeting{
+    font-size: 3rem;
+    margin: 10px;
+}
+
+.name{
+    font-size: 4rem;
+    margin: 5px;
+    color: grey;
+}
+
+.heart{
+    font-size: 8rem;
+    opacity: 0.6;
+}
+
+#date{
+    font-size: 30px;
+    color: rgb(241, 22, 22);
+    text-shadow: 2px 2px #0e0d0d;
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+    <time class='time-container'>
+        <h1 id="clock">11:12:12 PM</h1>
+        <h2 class="greeting" id="greet">Good Night</h2>
+        <h2 class="name" id='chName' contenteditable="true">bhjb</h2>
+        <h2 class="heart" id='mood'></h2>
+        <h3 id='date'></h3>
+    </time>
+    <script>var clock = document.getElementById('clock');
+        var greeting  = document.getElementById('greet');
+        var mood = document.getElementById('mood');
+        const name = document.getElementById('chName');
+        var todayDate = document.getElementById('date');
+        
+        name.addEventListener("keypress",setName);
+        name.addEventListener("blur",setName);
+        function updateTime(){
+        var time =  new Date();
+        var hours = time.getHours();
+        var min = time.getMinutes();
+        var seconds = time.getSeconds();
+        var amPm = hours>12?'PM':'AM';
+        var hour_t  = hours%12||12; 
+        var today = time.toDateString();
+        clock.innerHTML = `${addZero(hour_t)}<span>:</span>${addZero(min)}<span>:</span>${addZero(seconds)} ${amPm}`;
+        todayDate.innerHTML = `${today}`;
+        if (hours >=20){
+            document.body.style.backgroundImage = "url('../images/moon2.jpg')";
+            clock.style.color = "white";
+            greeting.style.color = "white";
+            greeting.innerHTML = 'Good Night';
+   
+        }
+        else if(hours>=16 && hours<20){
+            document.body.style.backgroundImage = "url('../images/scene1.jpg')";
+            clock.style.color = "white";
+            greeting.style.color = "white";
+            greeting.innerHTML = 'Good Evening';
+        }
+        else if(hours>=12 && hours<16){
+            document.body.style.backgroundImage = "url('../images/moon1.jpg')";
+            clock.style.color = "black";
+            greeting.style.color = "white";
+            greeting.innerHTML = 'Good Afternoon';
+
+        }
+        else{
+            document.body.style.backgroundImage = "url('../images/scene2.jpg')";
+            clock.style.color = "Black";
+            greeting.style.color = "Black";
+            greeting.innerHTML = 'Good Morning';
+        }
+        
+        setTimeout(updateTime,1000);
+        }
+        updateTime();
+        getName();
+        
+        function addZero(n){
+            return parseInt(n)<10?'0'+n:n;
+        };
+        
+        function setName(e){
+            if (e.type === 'keypress'){
+                if (e.keyCode === 13){
+                    localStorage.setItem("name",e.target.innerHTML);
+                    name.blur();
+                }
+            }
+            else{
+                localStorage.setItem("name",e.target.innerHTML);
+            }
+        
+        };
+        
+        function getName(){
+            if (localStorage.getItem('name') === null){
+                name.innerHTML = '[Enter Name]';
+            }
+            else{
+                name.innerHTML = localStorage.getItem('name');
+            }
+        }
+    </script>
+</body>
+</html>
